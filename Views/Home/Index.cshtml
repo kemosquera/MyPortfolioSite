@@ -1,0 +1,150 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<!-- HOME SECTION -->
+<section id="home" class="section home-section">
+    <div class="container text-center">
+        <h1>Kenlly Photography</h1>
+        <p>Capturing life's most memorable moments with style and passion.</p>
+    </div>
+</section>
+
+<!-- PORTFOLIO SECTION -->
+<section id="portfolio" class="section portfolio-section bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">Portfolio</h2>
+        <div class="row">
+            <!-- Project 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <!-- Using Picsum with a random seed -->
+                    <img src="https://picsum.photos/600/400?random=1" class="card-img-top" alt="Project 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Wedding Photography</h5>
+                        <p class="card-text">
+                            Capturing every heartfelt moment of your special day, from the grand entrance to the final dance.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://picsum.photos/600/400?random=2" class="card-img-top" alt="Project 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Portrait Photography</h5>
+                        <p class="card-text">
+                            Bringing out the personality in every shot—perfect for individuals, families, and corporate headshots.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://picsum.photos/600/400?random=3" class="card-img-top" alt="Project 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Landscape Photography</h5>
+                        <p class="card-text">
+                            Showcasing the beauty of nature through breathtaking vistas and hidden gems across the globe.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section id="about" class="section about-section">
+    <div class="container">
+        <h2 class="text-center mb-5">About Me</h2>
+        <p class="lead text-center">
+            My name is John Doe, a self-taught photographer with a passion for storytelling through images. 
+            Growing up, I was fascinated by the way a single photo could preserve the essence of a moment forever. 
+            Over the years, I've honed my craft, traveling the world to capture everything from romantic weddings to rugged landscapes. 
+            My mission is simple: to help you hold onto the moments that matter most.
+        </p>
+    </div>
+</section>
+
+<!-- SERVICES SECTION -->
+<section id="services" class="section services-section bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">Services</h2>
+        <div class="row text-center">
+            <div class="col-md-4 mb-4">
+                <h4>Wedding Packages</h4>
+                <p>Full-day coverage, candid shots, and a custom-designed photo album to cherish for a lifetime.</p>
+            </div>
+            <div class="col-md-4 mb-4">
+                <h4>Portrait Sessions</h4>
+                <p>Professional headshots, family portraits, and personal branding sessions to capture your unique style.</p>
+            </div>
+            <div class="col-md-4 mb-4">
+                <h4>Event Coverage</h4>
+                <p>Corporate events, product launches, and private parties—ensuring every detail is documented beautifully.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIALS SECTION -->
+<section id="testimonials" class="section testimonials-section">
+    <div class="container">
+        <h2 class="text-center mb-5">Testimonials</h2>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <blockquote class="blockquote">
+                    <p>
+                        "John was absolutely amazing on our wedding day! He captured every emotion and turned our memories into art."
+                    </p>
+                    <footer class="blockquote-footer">Emily & Jacob</footer>
+                </blockquote>
+            </div>
+            <div class="col-md-6 mb-4">
+                <blockquote class="blockquote">
+                    <p>
+                        "I needed professional headshots for my startup, and John exceeded my expectations. Highly recommend!"
+                    </p>
+                    <footer class="blockquote-footer">Michael Tan, CEO at TechNova</footer>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="section contact-section bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">Contact</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <form method="post" asp-action="Contact">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" name="name" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email address</label>
+                        <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" name="message" id="message" rows="4" required></textarea>
+                    </div>
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                    </div>
+                </form>
+                @if (ViewBag.Message != null)
+                {
+                    <div class="alert alert-success mt-3" role="alert">
+                        @ViewBag.Message
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>
